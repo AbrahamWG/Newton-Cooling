@@ -1,0 +1,42 @@
+body{
+    background-color: #282A36 !important;
+}
+
+a{
+    text-align: center;
+    color: #4EE2BB !important;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.1cm;
+    margin-top: 20px;
+    display: block !important;
+}
+
+b{
+    text-align: center;
+    color: #94DEDB !important;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 65px;
+    letter-spacing: 0.1cm;
+    margin-top: 20px;
+    display: block !important;
+}
+
+input[type=text] {
+    background-color: rgb(253, 253, 253);
+    width: 50%;
+    padding: 10px;
+    margin-inline: 20px;
+  }
+
+.centered{
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+}
+
+#submit{
+    width: 10%;
+    margin: auto;
+}
