@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import math
-from numpy import float16
+import numpy
 
 app = Flask(__name__, template_folder='template',static_folder='static')
 
@@ -12,11 +12,11 @@ Tb = int(37)
 def index():
     return render_template("index.html")
 
-@app.route("/", methods=["POST", "GET"])
+@app.route("/", methods=["GET", "POST"])
 def getvalue():
-    Tt = request.form("T(t)", type=int) 
-    T0 = request.form("T0", type=int)
-    t = request.form("t", type=int)
+    Tt = request.form.getlist("T(t)", type=int) 
+    T0 = request.form.getlist("T0", type=int)
+    t = request.form.getlist("t", type=int)
 
     k = (math.log((Tt-Ts)/(T0-Ts)))
     k1 = k/t*-1
