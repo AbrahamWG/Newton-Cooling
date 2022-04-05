@@ -4,7 +4,6 @@ import numpy
 
 app = Flask(__name__, template_folder='template',static_folder='static')
 
-e = float(2.71828182845)
 Ts = int(21)
 Tb = int(37)
 
@@ -17,12 +16,13 @@ def getvalue():
     Tt = request.form.getlist("T(t)", type=int) 
     T0 = request.form.getlist("T0", type=int)
     t = request.form.getlist("t", type=int)
+    Ts = request.form.getlist("Ts", type=int)
 
     k = (math.log((Tt-Ts)/(T0-Ts)))
     k1 = k/t*-1
 
     x = (math.log((T0-Ts)/(Tb-Ts)))
-    x1 = x/k1*-1
+    x1 = x/k1*-1ç
 
     final = {}
     final['status'] = x1
