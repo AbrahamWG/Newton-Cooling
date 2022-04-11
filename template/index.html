@@ -8,30 +8,50 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
-        <link rel= "script" href= "{{ url_for('static',filename='main.js') }}">
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">            
     </head>
     <body>
         <div id="banner" class="mx-auto my-auto d-block">
-            <a>NEWTON'S LAW OF COOLING</a>
+            <b>DEATH TIME CALCULATOR</b>
         </div>
-        <form id="data_form">
+        <div id="teori" class="container-fluid ">
+            <p>Kalkulator ini hanya mengambil 4 input, yaitu nilai Ts (suhu ruangan), 
+                t (waktu), T0 (suhu awal objek), T(t) (suhu pada saat pengukuran kedua). 
+                Output yang diharapkan adalah jarak waktu "x" dari suhu normal tubuh menuju 
+                suhu pengukuran pertama, alias waktu kematian.  Setelah semua kolom input 
+                telah diisi, tekan tombol submit dan suhu akhir objek akan terlampir di bawah “Result”. 
+                Untuk informasi lebih lanjut, silakan klik link -> 
+                <a href="url">
+                    https://docs.google.com/document/d/1otPMFccOzKCUw03RuIXJCEMny8UKj05fykq1vtAqK94/edit?usp=sharing
+                </a>
+            </p>
+            <p>Contoh: Seseorang mati di dalam ruangan 25 derajat Celcius. Detektif mengukur suhu pertamanya, yaitu
+                30 derajat Celcius. Setelah lewat 10 menit, si detektif mengukur suhu tubuh mayat dan mendapatkan
+                28 derajat Celcius.
+            </p>
+            <p>Input: Ts = 25, t = 10, T0 = 30, T(t) = 28</p>
+
+        </div>
+        <form id="data_form" method="POST" action="/">
             <div id="input" class="d-flex flex-row justify-content-around centered d-inline-block input-group-lg mb-3">
-                <input type="text" placeholder="T(t)" id="T(t)">
-                <input type="text" placeholder="t" id="t">
-                <input type="text" placeholder="T0" id="T0">
-                <input type="text" placeholder="Ts" id="Ts">
+                <input type="text" placeholder="Ts (suhu ruangan dalam Celcius)" name="Ts"> 
+                <input type="text" placeholder="t (waktu pengukuran dalam menit)" name="t">
+                <input type="text" placeholder="T0 (suhu pengukuran pertama)" name="T0">
+                <input type="text" placeholder="T(t) (suhu pengukuran kedua)" name="T(t)">
             </div>
             <div>
-                <input class="btn btn-success fw-bold d-flex justify-content-center" type="submit" value="Submit" id="submit">
+                <button type="submit" class="btn fw-bold d-flex justify-content-center"  value="submit" id="submit">Calculate</button>
             </div>
         </form>
 
-        <p id='status' style="color:white; font-size: 16px;margin-top: 5px; padding-left: 20px">Result: </p>
+        {%if x1%}
+        <p id='status' style="padding-top: 70px; padding-left: 20px">Result: the subject died around {{x1}} hours ago. </p>
+        {%endif%}
 
-        <script src="{{url_for('static', filename='main.js')}}"/>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+        <p id="credits">
+            Made by Kelompok 1 XI IPA
+            Developed by Bam & Mario
+        </p>
     </body>
 </html>
 

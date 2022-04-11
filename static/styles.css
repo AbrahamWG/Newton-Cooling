@@ -1,32 +1,25 @@
 body{
-    background-color: #282A36 !important;
+    background-color: #11052C !important;
 }
 
-a{
+b{
     text-align: center;
-    color: #4EE2BB !important;
+    color: #F43B86 !important;
     font-family: 'League Spartan', sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     letter-spacing: 0.1cm;
     margin-top: 20px;
     display: block !important;
 }
 
-math{
-    text-align: center;
-    color: #94DEDB !important;
-    font-family: 'League Spartan', sans-serif;
-    font-size: 65px;
-    letter-spacing: 0.1cm;
-    margin-top: 20px;
-    display: block !important;
-}
 
 input[type=text] {
-    background-color: rgb(253, 253, 253);
+    background-color: #3D087B;
     width: 50%;
+    color: white;
     padding: 10px;
     margin-inline: 20px;
+    border-color: black;
   }
 
 
@@ -41,8 +34,32 @@ input[type=text] {
 #submit{
     width: 10%;
     margin: auto;
+    color: white;
+    background-color: #F43B86;
 }
 
-img{
-    opacity: 40%;
+#status{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px;
+    color: #FFE459;
+}
+
+#teori{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #FFE459;
+    background-color: 3D087B;
+}
+
+#credits{
+    white-space: pre-line;
+    font-family: 'League Spartan', sans-serif;
+    color: #F43B86;
+    position: fixed; 
+    bottom: 0; 
+    width:100%; 
+    text-align: center;
+    padding-bottom: 1%;
 }
