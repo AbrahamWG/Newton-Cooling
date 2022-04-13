@@ -40,8 +40,12 @@ input[type=text] {
 
 #status{
     font-family: 'League Spartan', sans-serif;
-    font-size: 30px;
-    color: #FFE459;
+    font-size: 40px;
+    color: black;
+    bottom: 25%;
+    left: 32%;
+    position: absolute;
+
 }
 
 #teori{
@@ -63,4 +67,28 @@ input[type=text] {
     text-align: center;
     padding-bottom: 1%;
     font-size: 13px;
+}
+
+#newton{
+    width: 350px;
+    height: 350px;
+    bottom: 0%;
+    position: absolute;
+    left: 5%;
+}
+
+#chatbox{
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    bottom: 10%;
+    left: 29%;
+}
+
+#timesand{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 5%;
+    right: 4%;
 }

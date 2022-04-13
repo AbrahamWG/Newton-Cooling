@@ -19,17 +19,17 @@
                 t (waktu), T0 (suhu awal objek), T(t) (suhu pada saat pengukuran kedua). 
                 Output yang diharapkan adalah jarak waktu "x" dari suhu normal tubuh menuju 
                 suhu pengukuran pertama, alias waktu kematian.  Setelah semua kolom input 
-                telah diisi, tekan tombol submit dan suhu akhir objek akan terlampir di bawah “Result”. 
-                Untuk informasi lebih lanjut, silakan klik link -> 
+                telah diisi, tekan tombol submit dan suhu akhir objek akan dijawab oleh Newton. 
+                <br>Untuk informasi lebih lanjut, silakan klik link -> 
                 <a href="url">
                     https://docs.google.com/document/d/1otPMFccOzKCUw03RuIXJCEMny8UKj05fykq1vtAqK94/edit?usp=sharing
                 </a>
             </p>
             <p>Contoh: Seseorang mati di dalam ruangan 25 derajat Celcius. Detektif mengukur suhu pertamanya, yaitu
                 30 derajat Celcius. Setelah lewat 10 menit, si detektif mengukur suhu tubuh mayat dan mendapatkan
-                28 derajat Celcius.
+                28 derajat Celcius. <br>Input: Ts = 25, t = 10, T0 = 30, T(t) = 28
             </p>
-            <p>Input: Ts = 25, t = 10, T0 = 30, T(t) = 28</p>
+            <br>
 
         </div>
         <form id="data_form" method="POST" action="/">
@@ -44,8 +44,17 @@
             </div>
         </form>
 
+        <img src="/static/img/Newton.png" alt="Newton" id="newton">
+        
+        <img src="/static/img/icon.gif" alt="timesand" id="timesand">
+
         {%if x1%}
-        <p id='status' style="padding-top: 70px; padding-left: 20px">Result: the subject died around {{x1}} minutes ago. </p>
+        <img src="/static/img/chat.png" alt="chatbox" id="chatbox">
+
+        <p id='status' style="padding-top: 70px; padding-left: 20px">
+            The subject died around <br>
+            {{x1}} minutes ago. </p>
+
         {%endif%}
 
         <p id="credits">
